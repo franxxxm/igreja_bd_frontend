@@ -1,0 +1,46 @@
+<form action="" class="mt-4">
+<table class="table table-striped">
+    <thead>
+        <th><button class="btn btn-sm btn-success">Pesquisar</button></th>
+        <th><input class="caixa" type="search" name="" id="" placeholder="Email"></th>
+        <th><input class="caixa" type="search" name="" id="" placeholder="Nome"></th>
+        <th><input class="caixa" type="search" name="" id="" placeholder="Endereço"></th>
+        <th><input class="caixa" type="search" name="" id="" placeholder="Telefone"></th>
+        <th><input class="caixa" type="search" name="" id="" placeholder="Data"></th>
+        <th><input class="caixa" type="search" name="" id="" placeholder="Comunidades"></th>
+        <th><input class="caixa" type="search" name="" id="" placeholder="Pastoral(ais)"></th>
+        <th><input class="caixa" type="search" name="" id="" placeholder="Dizimista"></th>
+        
+    </thead>
+    <thead>
+        <tr>
+            <th scope="col">Botões</th>
+            <th scope="col">Email</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Data de Nascimento</th>
+            <th scope="col">Comunidades</th>
+            <th scope="col">Pastoral(ais)</th>
+            <th scope="col">Dizimista</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td><a href="" class="btn btn-info"><i class="bi bi-pencil-fill"></i></a> <a href="" class="btn btn-danger mt-2"><i class="bi bi-trash3-fill"></i></a></td>
+            <td>{{email}}</td>
+            <td>{{nome}}</td>
+            <td>{{endereco}}</td>
+            <td>{{telefone}}</td>
+            <td>{{dataNasc}}</td>
+            <td>{{comunidade}}</td>
+            <td>{{pastoral}}</td>
+            <td>{{#if dizimista}} sim {{else}} não {{/if}}</td>
+        </tr>
+        {{else}}
+        <h1>SEM DADOS REGISTRADOS!!</h1>
+        {{/each}}
+    </tbody>
+</table>
+</form>
